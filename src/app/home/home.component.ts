@@ -7,15 +7,15 @@ import { HomeService } from './home.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  public nodeWorking:boolean = false;
+  public users:any = [];
   constructor(
   	private _homeservice: HomeService
   ) { }
 
   ngOnInit(): void {
    this._homeservice.checknode().subscribe((data) => {
-            console.log(data);
-            alert(' node working in staging server');
+            this.nodeWorking = true;
         });
 
   }

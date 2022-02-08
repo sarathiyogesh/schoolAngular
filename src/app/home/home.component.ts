@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
    this._homeservice.checknode().subscribe((data) => {
             console.log(data);
-            alert(' node working');
+            alert(' node working in staging server');
         });
 
   }
